@@ -46,8 +46,8 @@ import {
 
 const squareA: CollisionsRectangle = {x: 0, y: 0, width: 100, height: 50};
 const squareB: CollisionsRectangle = {x: 50, y: 50, width: 50, height: 25};
-const circleA: CollisionsCircle = {x: 25, y: 25, r: 10};
-const circleB: CollisionsCircle = {x: 0, 100, r: 10};
+const circleA: CollisionsCircle = {x: 25, y: 25, radius: 10};
+const circleB: CollisionsCircle = {x: 0, 100, radius: 10};
 const point: CollisionsLine = {p1: {x: 0, y: 0}, p2: {x: 100, y: 100}};
 
 isRectIntersectsRect(squareA, squareB);
