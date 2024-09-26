@@ -3,7 +3,7 @@ import {isRectIntersectsCircle} from '../isRectIntersectsCircle';
 import {CollisionsRectangle, CollisionsCircle} from '../collisions.types';
 
 describe('isRectIntersectsRect', () => {
-  it('Прямоугольник пересекается с окружностью', () => {
+  it('The rectangle intersects with the circle', () => {
     const square: CollisionsRectangle = {x: 100, y: 100, width: 100, height: 50};
     const circle: CollisionsCircle = {x: 75, y: 75, radius: 100};
 
@@ -11,7 +11,7 @@ describe('isRectIntersectsRect', () => {
     expect(isRectIntersectsCircle(square, circle)).toEqual(true);
   });
 
-  it('Прямоугольник не пересекается с окружностью', () => {
+  it('The rectangle does not intersect with the circle', () => {
     const square: CollisionsRectangle = {x: 100, y: 100, width: 100, height: 50};
     const circle: CollisionsCircle = {x: 45, y: 45, radius: 20};
 

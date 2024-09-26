@@ -3,7 +3,7 @@ import {isCircleIntersectsLine} from '../isCircleIntersectsLine';
 import {CollisionsCircle, CollisionsLine} from '../collisions.types';
 
 describe('isCircleIntersectsLine', () => {
-  it('Линия пересекается с окружностью', () => {
+  it('The line intersects with the circle', () => {
     const circle: CollisionsCircle = {x: 100, y: 100, radius: 100};
     const line: CollisionsLine = {p1: {x: 75, y: 75}, p2: {x: 75, y: 200}};
 
@@ -11,7 +11,7 @@ describe('isCircleIntersectsLine', () => {
     expect(isCircleIntersectsLine(circle, line)).toEqual(true);
   });
 
-  it('Линия не пересекается с окружностью', () => {
+  it('The line does not intersect with the circle', () => {
     const circle: CollisionsCircle = {x: 100, y: 100, radius: 100};
     const line: CollisionsLine = {p1: {x: 75, y: 75}, p2: {x: 200, y: 75}};
 

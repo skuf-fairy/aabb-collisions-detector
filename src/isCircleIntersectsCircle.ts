@@ -1,8 +1,8 @@
 import {CollisionsCircle} from './collisions.types';
+import {squaredDistance as getSquaredDistance} from './collisions.utils';
 
 export function isCircleIntersectsCircle(circleA: CollisionsCircle, circleB: CollisionsCircle): boolean {
-  const squareDistance =
-    (circleA.x - circleB.x) * (circleA.x - circleB.x) + (circleA.y - circleB.y) * (circleA.y - circleB.y);
+  const squaredDistance = getSquaredDistance(circleA.x, circleA.y, circleB.x, circleB.y);
 
-  return squareDistance <= (circleA.radius + circleB.radius) * (circleA.radius + circleB.radius);
+  return squaredDistance <= Math.pow(circleA.radius + circleB.radius, 2);
 }
