@@ -6,7 +6,10 @@
   "files": [
     "lib/"
   ],
-  "repository": "https://github.com/skuf-fairy/aabb-collisions-detector.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skuf-fairy/aabb-collisions-detector.git"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -29,5 +32,31 @@
     "prettier": "2.8.7",
     "typescript": "5.2.2",
     "vitest": "0.28.3"
-  }
+  },
+  "description": "Simple collisions detector for 2d",
+  "keywords": [
+    "2d-collision",
+    "2d-collision",
+    "library",
+    "collision",
+    "collision-detection",
+    "collisions",
+    "detection",
+    "gamedev",
+    "game",
+    "library",
+    "rectangle",
+    "collisions",
+    "circle",
+    "collisions",
+    "lines",
+    "collisions",
+    "aabb",
+    "collisions"
+  ],
+  "author": "skuf-fairy",
+  "bugs": {
+    "url": "https://github.com/skuf-fairy/aabb-collisions-detector/issues"
+  },
+  "homepage": "https://github.com/skuf-fairy/aabb-collisions-detector#readme"
 }

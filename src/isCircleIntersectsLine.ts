@@ -1,12 +1,12 @@
 import {CollisionsCircle, CollisionsLine} from './collisions.types';
-import {isPointIntersectCircle} from './isPointIntersectsCircle';
+import {isPointIntersectsCircle} from './isPointIntersectsCircle';
 
-export function isCircleIntersectLine(line: CollisionsLine, circle: CollisionsCircle): boolean {
+export function isCircleIntersectsLine(line: CollisionsLine, circle: CollisionsCircle): boolean {
   //check to see if start or end points lie within circle
-  if (isPointIntersectCircle(line.p1, circle)) {
+  if (isPointIntersectsCircle(line.p1, circle)) {
     return true;
   }
-  if (isPointIntersectCircle(line.p2, circle)) {
+  if (isPointIntersectsCircle(line.p2, circle)) {
     return true;
   }
 
@@ -44,5 +44,5 @@ export function isCircleIntersectLine(line: CollisionsLine, circle: CollisionsCi
   const pLen2 = px * px + py * py;
 
   //check collision
-  return isPointIntersectCircle(nearest, circle) && pLen2 <= dLen2 && px * dx + py * dy >= 0;
+  return isPointIntersectsCircle(nearest, circle) && pLen2 <= dLen2 && px * dx + py * dy >= 0;
 }
