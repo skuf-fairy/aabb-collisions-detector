@@ -1,6 +1,8 @@
-### AABB Collision Detector
+# AABB Collision Detector
 
 It is a library for detecting collisions between simple geometric shapes such as rectangles, circles, points and lines. It uses typescript and has no dependencies. Easy to use, compatible with both canvas and any rendering libraries such as pixi.js , phaser.js and others.
+
+[Interactive example](https://codepen.io/vladosina/pen/zYgGXbm)
 
 ## Installation
 
@@ -53,6 +55,6 @@ const point: CollisionsLine = {p1: {x: 0, y: 0}, p2: {x: 100, y: 100}};
 isRectIntersectsRect(squareA, squareB);
 isRectIntersectsCircle(squareA, circle);
 isCircleIntersectsCircle(circleA, circleB);
-isPointIntersectCircle(point, circleA);
-isCircleIntersectLine(circleA, line);
+isPointIntersectsCircle(point, circleA);
+isCircleIntersectsLine(circleA, line);
 ```
