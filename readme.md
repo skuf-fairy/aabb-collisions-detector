@@ -25,8 +25,8 @@ yarn add aabb-collisions-detector
 | isRectIntersectsRect(squareA, squareB)     | Determines whether two rectangles intersect                 |
 | isRectIntersectsCircle(square, circle)     | Determines whether the rectangle intersects with the circle |
 | isCircleIntersectsCircle(circleA, circleB) | Determines whether two circles intersect                    |
-| isPointIntersectCircle(point, circle)      | Determines whether a point is inside a circle               |
-| isCircleIntersectLine(circle, line)        | Determines whether the line intersects with the circle      |
+| isPointIntersectsCircle(point, circle)     | Determines whether a point is inside a circle               |
+| isCircleIntersectsLine(circle, line)       | Determines whether the line intersects with the circle      |
 
 ## Code Example
 
