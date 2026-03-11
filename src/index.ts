@@ -1,7 +1,11 @@
 export * from './collisions.types';
 
-export {isRectIntersectsRect} from './isRectIntersectsRect';
-export {isCircleIntersectsCircle} from './isCircleIntersectsCircle';
-export {isRectIntersectsCircle} from './isRectIntersectsCircle';
-export {isCircleIntersectsLine} from './isCircleIntersectsLine';
-export {isPointIntersectsCircle} from './isPointIntersectsCircle';
+export {isRectIntersectsRect} from './detectors/isRectIntersectsRect';
+export {isCircleIntersectsCircle} from './detectors/isCircleIntersectsCircle';
+export {isRectIntersectsCircle} from './detectors/isRectIntersectsCircle';
+export {isCircleIntersectsLine} from './detectors/isCircleIntersectsLine';
+export {isPointIntersectsCircle} from './detectors/isPointIntersectsCircle';
+export {isRectInsideRect} from './detectors/isRectInsideRect';
+export {isCircleInsideCircle} from './detectors/isCircleInsideCircle';
+export {isRectInsideCircle} from './detectors/isRectInsideCircle';
+export {isCircleInsideRect} from './detectors/isCircleInsideRect';

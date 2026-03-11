@@ -1,5 +1,5 @@
-import {CollisionsRectangle, CollisionsCircle} from './collisions.types';
-import {squaredDistance} from './collisions.utils';
+import {CollisionsRectangle, CollisionsCircle} from '../collisions.types';
+import {squaredDistance} from '../collisions.utils';
 
 // https://stackoverflow.com/questions/401847/circle-rectangle-collision-detection-intersection
 export function isRectIntersectsCircle(rect: CollisionsRectangle, circle: CollisionsCircle): boolean {

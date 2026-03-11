@@ -1,4 +1,4 @@
-import {CollisionsRectangle} from './collisions.types';
+import {CollisionsRectangle} from '../collisions.types';
 
 export function isRectIntersectsRect(rectA: CollisionsRectangle, rectB: CollisionsRectangle): boolean {
   return (

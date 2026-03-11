@@ -1,4 +1,4 @@
-import {CollisionsCircle, Point2d} from './collisions.types';
+import {CollisionsCircle, Point2d} from '../collisions.types';
 
 export function isPointIntersectsCircle(point: Point2d, circle: CollisionsCircle) {
   if (circle.radius === 0) return false;

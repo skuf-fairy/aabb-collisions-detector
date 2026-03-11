@@ -1,4 +1,4 @@
-import {CollisionsCircle, CollisionsLine} from './collisions.types';
+import {CollisionsCircle, CollisionsLine} from '../collisions.types';
 import {isPointIntersectsCircle} from './isPointIntersectsCircle';
 
 export function isCircleIntersectsLine(circle: CollisionsCircle, line: CollisionsLine): boolean {

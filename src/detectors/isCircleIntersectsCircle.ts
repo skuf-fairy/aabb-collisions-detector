@@ -1,5 +1,5 @@
-import {CollisionsCircle} from './collisions.types';
-import {squaredDistance as getSquaredDistance} from './collisions.utils';
+import {CollisionsCircle} from '../collisions.types';
+import {squaredDistance as getSquaredDistance} from '../collisions.utils';
 
 export function isCircleIntersectsCircle(circleA: CollisionsCircle, circleB: CollisionsCircle): boolean {
   const squaredDistance = getSquaredDistance(circleA.x, circleA.y, circleB.x, circleB.y);
