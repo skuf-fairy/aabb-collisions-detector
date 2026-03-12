@@ -1,21 +1,28 @@
-import {CollisionsCircle, CollisionsLine} from '../collisions.types';
 import {isPointIntersectsCircle} from './isPointIntersectsCircle';
 
-export function isCircleIntersectsLine(circle: CollisionsCircle, line: CollisionsLine): boolean {
+export function isCircleIntersectsLine(
+  circleX: number,
+  circleY: number,
+  circleRadius: number,
+  lineP1X: number,
+  lineP1Y: number,
+  lineP2X: number,
+  lineP2Y: number,
+): boolean {
   // check to see if start or end points lie within circle
-  if (isPointIntersectsCircle(line.p1, circle)) {
+  if (isPointIntersectsCircle(lineP1X, lineP1Y, circleX, circleY, circleRadius)) {
     return true;
   }
-  if (isPointIntersectsCircle(line.p2, circle)) {
+  if (isPointIntersectsCircle(lineP2X, lineP2Y, circleX, circleY, circleRadius)) {
     return true;
   }
 
-  const x1 = line.p1.x,
-    y1 = line.p1.y,
-    x2 = line.p2.x,
-    y2 = line.p2.y,
-    cx = circle.x,
-    cy = circle.y;
+  const x1 = lineP1X,
+    y1 = lineP1Y,
+    x2 = lineP2X,
+    y2 = lineP2Y,
+    cx = circleX,
+    cy = circleY;
 
   // vector d
   const dx = x2 - x1;
@@ -45,5 +52,9 @@ export function isCircleIntersectsLine(circle: CollisionsCircle, line: Collision
   const pLen2 = px * px + py * py;
 
   //check collision
-  return isPointIntersectsCircle(nearest, circle) && pLen2 <= dLen2 && px * dx + py * dy >= 0;
+  return (
+    isPointIntersectsCircle(nearest.x, nearest.y, circleX, circleY, circleRadius) &&
+    pLen2 <= dLen2 &&
+    px * dx + py * dy >= 0
+  );
 }

@@ -1,15 +1,21 @@
-import {CollisionsCircle, CollisionsRectangle} from '../collisions.types';
+export function isCircleInsideRect(
+  circleX: number,
+  circleY: number,
+  circleRadius: number,
+  rectX: number,
+  rectY: number,
+  rectWidth: number,
+  rectHeight: number,
+): boolean {
+  const circleLeft = circleX - circleRadius;
+  const circleRight = circleX + circleRadius;
+  const circleTop = circleY - circleRadius;
+  const circleBottom = circleY + circleRadius;
 
-export function isCircleInsideRect(circle: CollisionsCircle, rect: CollisionsRectangle): boolean {
-  const circleLeft = circle.x - circle.radius;
-  const circleRight = circle.x + circle.radius;
-  const circleTop = circle.y - circle.radius;
-  const circleBottom = circle.y + circle.radius;
-
-  const rectLeft = rect.x;
-  const rectRight = rect.x + rect.width;
-  const rectTop = rect.y;
-  const rectBottom = rect.y + rect.height;
+  const rectLeft = rectX;
+  const rectRight = rectX + rectWidth;
+  const rectTop = rectY;
+  const rectBottom = rectY + rectHeight;
 
   return circleLeft >= rectLeft && circleRight <= rectRight && circleTop >= rectTop && circleBottom <= rectBottom;
 }

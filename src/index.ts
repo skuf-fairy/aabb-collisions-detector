@@ -1,5 +1,3 @@
-export * from './collisions.types';
-
 export {isRectIntersectsRect} from './detectors/isRectIntersectsRect';
 export {isCircleIntersectsCircle} from './detectors/isCircleIntersectsCircle';
 export {isRectIntersectsCircle} from './detectors/isRectIntersectsCircle';

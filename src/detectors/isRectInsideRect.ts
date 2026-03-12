@@ -1,10 +1,17 @@
-import {CollisionsRectangle} from '../collisions.types';
-
-export function isRectInsideRect(inner: CollisionsRectangle, outer: CollisionsRectangle): boolean {
+export function isRectInsideRect(
+  innerRectX: number,
+  innerRectY: number,
+  innerRectWidth: number,
+  innerRectHeight: number,
+  outerRectX: number,
+  outerRectY: number,
+  outerRectWidth: number,
+  outerRectHeight: number,
+): boolean {
   return (
-    inner.x >= outer.x &&
-    inner.y >= outer.y &&
-    inner.x + inner.width <= outer.x + outer.width &&
-    inner.y + inner.height <= outer.y + outer.height
+    innerRectX >= outerRectX &&
+    innerRectY >= outerRectY &&
+    innerRectX + innerRectWidth <= outerRectX + outerRectWidth &&
+    innerRectY + innerRectHeight <= outerRectY + outerRectHeight
   );
 }

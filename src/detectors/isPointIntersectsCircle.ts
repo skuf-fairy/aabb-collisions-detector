@@ -1,10 +1,14 @@
-import {CollisionsCircle, Point2d} from '../collisions.types';
+export function isPointIntersectsCircle(
+  pointX: number,
+  pointY: number,
+  circleX: number,
+  circleY: number,
+  circleRadius: number,
+): boolean {
+  if (circleRadius === 0) return false;
 
-export function isPointIntersectsCircle(point: Point2d, circle: CollisionsCircle) {
-  if (circle.radius === 0) return false;
+  const dx = circleX - pointX;
+  const dy = circleY - pointY;
 
-  const dx = circle.x - point.x;
-  const dy = circle.y - point.y;
-
-  return dx * dx + dy * dy <= circle.radius * circle.radius;
+  return dx * dx + dy * dy <= circleRadius * circleRadius;
 }

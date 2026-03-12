@@ -1,10 +1,17 @@
-import {CollisionsRectangle} from '../collisions.types';
-
-export function isRectIntersectsRect(rectA: CollisionsRectangle, rectB: CollisionsRectangle): boolean {
+export function isRectIntersectsRect(
+  rectAx: number,
+  rectAy: number,
+  rectAWidth: number,
+  rectAHeight: number,
+  rectBx: number,
+  rectBy: number,
+  rectBWidth: number,
+  rectBHeight: number,
+): boolean {
   return (
-    rectA.x < rectB.x + rectB.width &&
-    rectA.x + rectA.width > rectB.x &&
-    rectA.y < rectB.y + rectB.height &&
-    rectA.y + rectA.height > rectB.y
+    rectAx < rectBx + rectBWidth &&
+    rectAx + rectAWidth > rectBx &&
+    rectAy < rectBy + rectBHeight &&
+    rectAy + rectAHeight > rectBy
   );
 }
